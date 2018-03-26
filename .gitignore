@@ -1,0 +1,16 @@
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+#################
+## IDEA
+#################
+.idea/
+*.iml
+#################
+## iish
+#################
+_iish-*.md
