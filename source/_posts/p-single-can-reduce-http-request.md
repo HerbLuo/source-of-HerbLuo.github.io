@@ -14,6 +14,11 @@ pSingle 用于处理异步操作
 pSingle 包裹的异步操作在完成前不会再次执行。 
 只有当 pSingle 包裹的异步操作执行完毕后，pSingle才会使其可能再次运行
 
+pSingle 和 lodash.throttle的区别是，
+lodash.throttle 是固定时间只会执行一次
+pSingle 是 promise执行完毕前只执行一次
+
+
 ### 安装
 ```bash
 npm install --save p-single
