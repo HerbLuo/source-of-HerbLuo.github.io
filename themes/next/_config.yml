@@ -51,7 +51,7 @@ menu:
   #about: /about/
   archives: /archives/index.html
   tags: /tags/index.html
-  demos: /demos/index.html
+  # the-way: /the-way/index.html
   #sitemap: /sitemap.xml
   #commonweal: /404/
 
@@ -71,7 +71,7 @@ menu_icons:
   archives: archive
   sitemap: sitemap
   commonweal: heartbeat
-  demos: folder-open
+  the-way: folder-open
 
 
 
