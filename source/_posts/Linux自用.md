@@ -5,6 +5,46 @@ rust mysql错误
 library not found for -lmysqlclient
 ```
 
+# WSL
+启用`SSH Server`
+```shell
+sudo systemctl enable sshd
+sudo systemctl start sshd
+```
+
+如果失败,可以使用 `sudo /usr/sbin/sshd -d` 查看日志
+
+如果原因是确密钥,执行 `/usr/bin/ssh-keygen -A` 即可
+
+更改`sshd`配置以支持远程访问
+```shell
+sudo vim /etc/ssh/sshd_config
+# 确保以下选项正确
+PasswordAuthentication yes
+```
+```
+sudo systemctl restart sshd
+```
+
+# 阿里云,腾讯云,华为云等
+使用`autossh`需修改`ssh server`的配置
+```shell
+GatewayPorts yes
+```
+
+
+# Linux
+sudo 免密码
+```shell
+sudo su -
+chmod u+w /etc/sudoers
+vim /etc/sudoers
+# 文件尾添加 START
+用户名 ALL=(ALL:ALL) NOPASSWD:ALL
+# 文件尾添加 END
+chmod u-w /etc/sudoers
+```
+
 # Manjaro
 1. 排序并增加China源，以及添加`archlinuxcn`
 
